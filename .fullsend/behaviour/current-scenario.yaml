@@ -1,0 +1,17 @@
+ops:
+    - description: Emit review JSON
+      op: write_fixture
+      args: output/agent-result.json, fixtures/review/approve.json
+      content: |
+        {
+          "action": "approve",
+          "pr_number": 1,
+          "repo": "owner/repo",
+          "head_sha": "afe4e324c6d1832abccb9a42b5b03dc17b2c3456",
+          "body": "Behaviour smoke: the review bot approves.",
+          "risk_assessment": {
+            "score": 1,
+            "level": "low",
+            "rationale": "Behaviour smoke: a one-line test file change."
+          }
+        }
